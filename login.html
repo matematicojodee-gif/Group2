@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- LEFT SIDE -->
+        <div class="left-panel">
+            <div class="brand">
+                <div class="logo">✚</div>
+                <h2>PharmaForecast</h2>
+            </div>
+
+            <div class="welcome-text">
+                <h1>Smart Pharmacy<br>Inventory System</h1>
+                <p>
+                    Manage your medicine inventory efficiently
+                    and predict future medicine demands with
+                    intelligent forecasting.
+                </p>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <span>✓</span>
+                    <div>
+                        <h3>Inventory Management</h3>
+                        <p>Monitor medicine stocks easily.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span>✓</span>
+                    <div>
+                        <h3>Demand Forecasting</h3>
+                        <p>Predict future medicine requirements.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <span>✓</span>
+                    <div>
+                        <h3>Stock Monitoring</h3>
+                        <p>Keep track of available medicines.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="left-footer">
+                © 2026 PharmaForecast. All Rights Reserved.
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-panel">
+
+            <!-- LOGIN FORM -->
+            <div class="form-box" id="loginForm">
+
+                <div class="form-heading">
+                    <h1>Welcome Back!</h1>
+                    <p>Login to access your pharmacy system.</p>
+                </div>
+
+                <form id="login">
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="loginEmail"
+                            placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <div class="password-box">
+                            <input type="password" id="loginPassword"
+                                placeholder="Enter your password" required>
+                            <button type="button" class="toggle-password"
+                                onclick="togglePassword('loginPassword', this)">
+                                Show
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember">
+                            <input type="checkbox" id="rememberMe">
+                            Remember me
+                        </label>
+                        <a href="#" id="forgotPassword">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Login
+                    </button>
+
+                    <p class="switch-form">
+                        Don't have an account?
+                        <a href="#" id="showRegister">Register Here</a>
+                    </p>
+
+                </form>
+            </div>
+
+            <!-- REGISTER FORM -->
+            <div class="form-box hidden" id="registerForm">
+
+                <div class="form-heading">
+                    <h1>Create Account</h1>
+                    <p>Register to get started with PharmaForecast.</p>
+                </div>
+
+                <form id="register">
+
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fullName"
+                            placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="registerEmail"
+                            placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Role</label>
+                        <select id="userRole" required>
+                            <option value="">Select your role</option>
+                            <option value="Administrator">Administrator</option>
+                            <option value="Pharmacist">Pharmacist</option>
+                            <option value="Inventory Staff">Inventory Staff</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <div class="password-box">
+                            <input type="password" id="registerPassword"
+                                placeholder="Create a password" required>
+                            <button type="button" class="toggle-password"
+                                onclick="togglePassword('registerPassword', this)">
+                                Show
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Confirm Password</label>
+                        <div class="password-box">
+                            <input type="password" id="confirmPassword"
+                                placeholder="Confirm your password" required>
+                            <button type="button" class="toggle-password"
+                                onclick="togglePassword('confirmPassword', this)">
+                                Show
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Create Account
+                    </button>
+
+                    <p class="switch-form">
+                        Already have an account?
+                        <a href="#" id="showLogin">Login Here</a>
+                    </p>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="messageBox" class="message-box"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
